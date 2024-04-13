@@ -238,12 +238,13 @@ export const CartProvider = props => {
         )
       }, 0) || 0
 
-    setTotal({
-      formatted: (newTotal / 100).toLocaleString('en-US', {
-        style: 'currency',
-        currency: 'USD',
-      }),
-      raw: newTotal,
+      setTotal({
+        formatted: (newTotal / 100).toLocaleString('en-IN', {
+          style: 'currency',
+          currency: 'INR',
+        }),
+        raw: newTotal,
+      
     })
   }, [cart, hasInitialized])
 
